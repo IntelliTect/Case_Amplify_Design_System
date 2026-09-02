@@ -1,6 +1,6 @@
 # Case Amplify design system
 
-**Version:** v2026.09.01
+**Version:** v2026.09.02
 **For:** designers, marketers and content creators building pages on caseamplify.com
 
 ---
@@ -11,7 +11,7 @@ This document explains how to build content. It does not explain how the site is
 
 **In scope:** the page-building workflow, the pattern library, what each preset value currently is, image preparation, publishing, and what the block editor will and will not show you.
 
-**Out of scope:** writing CSS, adding new patterns, adding header dropdowns or footer columns, teaching HTML. Those need a developer.
+**Out of scope:** writing CSS, adding new patterns, adding header dropdowns or footer columns, teaching HTML.
 
 **Related documents:**
 
@@ -20,7 +20,7 @@ This document explains how to build content. It does not explain how the site is
 | `wave-system.md` | motion internals, the full class token list, why things work the way they do |
 | `case-amplify-manifest.md` | terminology, positioning, approved claims, compliance language |
 
-**The governing rule.** Everything is preset. Spacing, responsive behavior, type, color and animation are already correct when a pattern is dropped in. You edit content. If you want to bend a rule, ask Ian rather than working around it.
+**Thing to Remember.** Everything is preset. Spacing, responsive behavior, type, color and animation are already correct when a pattern is dropped in.
 
 ---
 
@@ -63,13 +63,13 @@ Page settings for a clean start:
 
 ### 2.4 Review
 
-Leave the page in **Draft**. Ian or Rob approve before publish. Run the checklist in §8 first.
+Leave the page in **Draft,** run the checklist in §8.
 
 ---
 
 ## 3. Foundations
 
-Values below are current, not proposed. The **Owner** column says where each one actually lives, so that when this document and the site disagree you know which to trust.
+Website values are listed below.
 
 ### 3.1 Type
 
@@ -266,7 +266,7 @@ Images inside custom HTML blocks are the exception: they do not inherit alt text
 
 Editing the pages inside one of these menus changes what appears in that dropdown or column on the live site. That is the whole of what an author needs.
 
-**Adding a new dropdown or a fifth footer column is out of scope.** It requires PHP work. Ask a developer.
+**Adding a new dropdown is out of scope.** It requires PHP work to implement correctly.
 
 The header and footer themselves are not editable from the page editor and should be left alone.
 
@@ -315,7 +315,7 @@ The one thing you can adjust visually is divider width, using the draggable colu
 
 ## 10. Advanced editing
 
-Everything here involves touching HTML. It is optional, and none of it is required for standard page building.
+Everything here involves touching code in one way or another. It is optional, and none of it is required for standard page building.
 
 ### 10.1 Before you start
 
@@ -323,7 +323,7 @@ Everything here involves touching HTML. It is optional, and none of it is requir
 
 Reading HTML is not covered here. If you cannot find what you need, paste the block's code into an AI assistant and ask where the thing you want to change is.
 
-**Add CSS classes only. Never write CSS.** If a block needs styling that does not exist, that is a request to Ian, not something to solve in the page.
+**Add CSS classes only. Never write additional inline CSS.**
 
 ### 10.2 Editing text inside a custom block
 
@@ -371,16 +371,6 @@ CTA sections are custom blocks, so the Adv highlight tool is not available in th
 Every CTA section ships with those tags already in place. Move them onto the word you want purple, or delete the tags if you do not want a highlight. Do not leave them wrapped around whatever text happened to be there in the default copy.
 
 The one-word rule from §3.1 still applies. Two words at most, and check they do not split across a line break at any window width.
-
----
-
-## 11. Open items
-
-Known gaps, recorded so they are not rediscovered.
-
-- **Color lives in two places.** Custom code blocks read `ca-base.css` `:root`; Kadence blocks read the Customizer palette. The two are not synchronized and hold different purples. One source is the goal. No action for authors.
-- **Panels are four only.** Two and three panel variants are possible future work.
-- **Full width is a manual step** because the site default page layout is set to narrow. Changing that default would remove a checklist item.
 
 ---
 
