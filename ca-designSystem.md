@@ -2,7 +2,6 @@
 
 **Version:** v2026.09.01
 **For:** designers, marketers and content creators building pages on caseamplify.com
-**Approval:** pages stay in Draft until Ian or Rob approve them.
 
 ---
 
